@@ -292,11 +292,11 @@ errors_t book_search_author(book_table_t *table, const char *author_name) {
 }
 
 // "Сборщик" экземпляра книги из отдельных данных
-book_t *book_form_book(const size_t isbn, 
-                       const char *auth_name, 
-                       const char *name, 
-                       const size_t total, 
-                       const size_t available, 
+book_t *book_form_book(const size_t isbn,
+                       const char *auth_name,
+                       const char *name,
+                       const size_t total,
+                       const size_t available,
                        errors_t *status) {
     book_t *book = book_init(status);
     if (book == NULL) {
@@ -451,7 +451,7 @@ errors_t book_edit_info_isbn(book_table_t *table, const size_t isbn) {
 
     printf("Enter new available: ");
     size_t available;
-    if (read_size_t(&available) != OK ) {
+    if (read_size_t(&available) != OK) {
         return READ_BOOK_AVAILABLE_ERR;
     }
 
@@ -537,7 +537,7 @@ errors_t book_table_save(book_table_t *table) {
 }
 
 // Restore
-errors_t book_table_restore(book_table_t **table, const char* filename) {
+errors_t book_table_restore(book_table_t **table, const char *filename) {
     errors_t status;
     book_table_t *bt = book_read_csv(filename, ";", &status);
     if (bt && status == OK) {
