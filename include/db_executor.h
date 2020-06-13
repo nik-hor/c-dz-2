@@ -19,7 +19,7 @@ typedef enum {
     // Возврат в менб верхнего уровня
     RETURN,
 
-    // Операция с книгами
+    // Операции с книгами
     BOOK_ADD,
     BOOK_REMOVE,
     BOOK_SHOW_INFO,
@@ -33,7 +33,7 @@ typedef enum {
     BOOK_SEARCH,
     SHOW_BOOKS_STUDENT,
 
-    // Опреации со студентами
+    // Операции со студентами
     STUDENT_ADD,
     STUDENT_REMOVE,
     STUDENT_EDIT,
@@ -43,7 +43,7 @@ typedef enum {
     STUDENT_SEARCH,
     SHOW_STUDENT_BOOKS,
 
-    // конеч меню
+    // конец меню
     END_MENU
 } supported_actions_t;
 
